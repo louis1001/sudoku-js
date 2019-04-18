@@ -1,13 +1,13 @@
 let theBoard
 
 function setup(){
-	createCanvas(800, 800)
+	createCanvas(min(windowWidth, windowHeight), min(windowWidth, windowHeight))
 
 	textFont('Courier New')
 	textAlign(CENTER, CENTER)
 
 	theBoard = new Board()
-	const board = sudoku.generate('hard')
+	const board = sudoku.generate('easy')
 	theBoard.loadBoard(board)
 	noLoop()
 }
